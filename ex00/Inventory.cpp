@@ -14,7 +14,12 @@ void Inventory::remove(const std::string& item)
 
 bool Inventory::has(const std::string& item) const
 {
-	std::string dummy = item;
+	for (const auto& inventoryItem : m_items)
+	{
+		if (item == inventoryItem)
+			return true;
+	}
+
 	return false;
 }
 
