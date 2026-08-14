@@ -13,5 +13,4 @@ class Inventory
 
 	private:
 		std::vector<std::string> m_items;
-		int m_count;
 };
