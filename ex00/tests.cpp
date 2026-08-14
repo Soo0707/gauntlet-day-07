@@ -38,7 +38,7 @@ TEST_CASE("removing a missing item is a no-op: count unchanged, other items unto
 	inv.add("potion");
 	inv.remove("other potion");
 
+	CHECK(inv.count() == 1);
 	CHECK(inv.has("potion"));
-	CHECK_FALSE(inv.has("other potion"));
 }
 
