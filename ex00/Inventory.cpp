@@ -9,7 +9,13 @@ void Inventory::add(const std::string& item)
 
 void Inventory::remove(const std::string& item)
 {
-	std::string dummy = item;
+	for (auto it = m_items.begin(); it != m_items.end();)
+	{
+		if (*it == item)
+			it = m_items.erase(it);
+		else
+			++it;
+	}
 }
 
 bool Inventory::has(const std::string& item) const
