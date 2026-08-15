@@ -6,8 +6,7 @@ struct RandomSource
 {
 	virtual ~RandomSource() = default;
 
-	virtual int next(int max) const
-	{ return std::rand() % max + 1; }
+	virtual int next(int max) const = 0;
 };
 
 class FakeRandom : public RandomSource
