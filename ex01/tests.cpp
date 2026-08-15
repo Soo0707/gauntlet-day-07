@@ -14,7 +14,8 @@ struct InventoryFixture
 
 TEST_CASE_METHOD(InventoryFixture, "adding an item raises the count")
 {
-    CHECK(inv.count() == 2);
+	inv.add("other sword");
+    CHECK(inv.count() == 3);
 }
 
 TEST_CASE_METHOD(InventoryFixture, "has() finds an added item and rejects a missing one")
